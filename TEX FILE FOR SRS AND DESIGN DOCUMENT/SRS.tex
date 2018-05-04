@@ -1,0 +1,111 @@
+\documentclass{scrreprt}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{underscore}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\hypersetup{
+    bookmarks=false,    % show bookmarks bar?
+    pdftitle={Software Requirement Specification},    % title
+    pdfsubject={TeX and LaTeX},                        % subject of the document
+    pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,       % color of internal links
+    citecolor=black,       % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=purple,        % color of external links
+    linktoc=page            % only page is linked
+}%
+\def\myversion{1.0 }
+\date{}
+%\title{%
+
+%}
+\usepackage{hyperref}
+\begin{document}
+
+\begin{flushright}
+    \rule{16cm}{5pt}\vskip1cm
+    \begin{bfseries}
+        \Huge{Software Requirement Specification}\\
+        \vspace{1.9cm}
+       COP290\\
+        \vspace{1.9cm}
+        \LARGE{AC Circuit Solver}\\
+        \vspace{1.9cm}
+        Prepared by \\ $$Himanshu Kejriwal - 2016CSJ0011$$\\ $$Rahul Byas Sherwan - 2016CSJ0028$$\\ $$Hrushikesh - 2016CSJ0030 $$
+        \vspace{1.9cm}
+        \today\\
+    \end{bfseries}
+\end{flushright}
+
+\tableofcontents
+
+\chapter{Introduction}
+$ $
+\\
+\\
+\\
+$ $
+\section{Overview}
+$ $ \\
+Designing a AC Circuit drawer and solver. This assignment is divided into two parts \\
+\\
+\indent Part 1 AC circuit will be drawn in a SVG image file\\
+\indent Part 2 Program an AC circuit simulator, which reports current flowing through components and voltage across it.
+\\
+\\ N. B. The inout has to be given in spicelist format. $ $
+\\
+\section{Tools Used}
+$ $
+\\
+\indent •Parser\\
+\\
+\indent •Regex Header File\\
+\\
+\indent •Eigen Header File\\
+\\
+$ $
+
+\section{Software Requirements}
+$ $\indent  •Eigen Header Required (Sudo apt-get install libeigen3-dev) run in terminal to \indent install it .\\
+\\
+\indent •Regex Header (no installation required inbuilt library in CPP)\\
+\\
+$ $
+\section{Functionality}
+$ $
+\\ 1. Encode your circuit in spicelist net format. Go through the pSPICE to get to know theaccurate format for error-free result. The extension of the input file is ".cir". \\
+\\
+ 2. The parser will check for errors and report if there are any errors.\\
+\\
+ 3. SVG file is generated when you type \\
+\\
+\indent "g++ -std=c++11 main.h solve.h  main.cpp  solve.cpp draw.h draw.cpp" \\
+\\
+in terminal (UNIX Environment) in the directory of folder. As per instructions, you have to make changes in "top.cir" file without altering its directory, for getting circuit as per your requirements. Open "top.svg" to view your circuit.
+\\
+\\
+ 4. To use the circuit solver, type\\
+\\
+\indent "g++ -std=c++11 main.h solve.h  main.cpp  solve.cpp draw.h draw.cpp" \\
+\\
+\\in terminal (UNIX Environment) in the directory of folder. A new file named "results.txt" is generated in the present directory. Voila! Go check it and find your answers. Thats technology, you know.
+\\
+\\
+\section{References}
+
+$ $1. MIT AC Circuit analysis notes. http://web.mit.edu/8.02t/www/802TEAL3D/visualizations/
+coursenotes/modules/guide12.pdf \\
+\\
+2. https://www.youtube.com/playlist?list=PL2EPLswhM_KYKCq9eu3EVUmRDoGXUV04V \\
+\\
+3. Solving multi-frequency circuits. http://www.allaboutcircuits.com/textbook/alternating-current/chpt-7/circuit-effects \\
+\\
+4. https://www.swarthmore.edu/NatSci/echeeve1/Ref/mna/MNA3.html \\
+\\
+5. Fundamentals of electrical engineering - Book by Leonard S. Bobrow ISBN 9780195111248 $ $
+\\
+\\
+\end{document}
