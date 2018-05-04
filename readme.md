@@ -1,5 +1,4 @@
-# ASSIGNMENT - 2
-## AC_CIRCUIT SOLVER
+# AC_CIRCUIT SOLVER
 - #### COMPILING STATEMENT :
 	**g++ -std=c++11 main.h solve.h  main.cpp  solve.cpp draw.h draw.cpp.**
 
